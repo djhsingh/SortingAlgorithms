@@ -3,9 +3,11 @@ package djh.learn.sortingAlgorithms;
 public class BubbleSortAlgorithm {
     public static void main(String[] args) {
         int[] arr = {34,23,24,54,17,04,60,41,86,12};
+        System.out.println("Before sorting...");
         for (int i : arr) {
-            System.out.println(i);
+            System.out.print(i+" ");
         }
+        System.out.println();
         //O(n^2) sorting algorithm
         for(int lastUnsortedIndex=arr.length-1;lastUnsortedIndex>0;lastUnsortedIndex--){ //O(n)
             //*
