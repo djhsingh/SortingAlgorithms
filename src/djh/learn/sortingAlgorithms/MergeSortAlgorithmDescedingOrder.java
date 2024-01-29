@@ -1,7 +1,7 @@
 package djh.learn.sortingAlgorithms;
 
 
-public class MergeSortAlgorithm {
+public class MergeSortAlgorithmDescedingOrder {
     public static void main(String[] args) {
         int[] arr = {34,23,24,54,17,04,60,41,86,12};
         System.out.println("Before sorting...");
@@ -28,7 +28,7 @@ public class MergeSortAlgorithm {
     }
 
     private static void  merge(int[] arr, int start, int midPoint, int end) {
-        if(arr[midPoint-1] <= arr[midPoint]){
+        if(arr[midPoint-1] >= arr[midPoint]){
             return;
         }
         int i = start;
@@ -36,7 +36,7 @@ public class MergeSortAlgorithm {
         int tempIndex = 0;
         int[] temp = new int[end-start];
         while(i < midPoint && j < end){
-            temp[tempIndex++] = arr[i] <= arr[j] ? arr[i++]:arr[j++];
+            temp[tempIndex++] = arr[i] >= arr[j] ? arr[i++]:arr[j++];
         }
         System.arraycopy(arr,i,arr,start+ tempIndex,midPoint-i);
         System.arraycopy(temp,0,arr,start,tempIndex);

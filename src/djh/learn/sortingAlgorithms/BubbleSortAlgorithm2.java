@@ -17,9 +17,6 @@ public class BubbleSortAlgorithm2 {
                      swap(arr,i,i+1);
                  }
            }
-            for (int i : arr) {
-                System.out.print(i+" ");
-            }
         }
         System.out.println("After sorting...");
         for (int i : arr) {

@@ -1,22 +1,22 @@
 package djh.learn.sortingAlgorithms;
 
-public class BubbleSortAlgorithm {
+public class SelectionSortAlgorithmDescendingOrder {
     public static void main(String[] args) {
         int[] arr = {34,23,24,54,17,04,60,41,86,12};
-        //backword loop
         System.out.println("Before sorting...");
         for (int i : arr) {
             System.out.print(i+" ");
         }
         System.out.println();
         //O(n^2) sorting algorithm
-        for(int lastUnsortedIndex=arr.length-1;lastUnsortedIndex>0;lastUnsortedIndex--){ //O(n)
-            //*
-            for (int i = 0; i < lastUnsortedIndex; i++) {  //O(n)
-                 if(arr[i] > arr[i+1]){
-                     swap(arr,i,i+1);
-                 }
+        for (int lastUnSortedIndex=arr.length-1;lastUnSortedIndex>0;lastUnSortedIndex--){
+            int smallest = 0;
+            for (int i = 0; i <= lastUnSortedIndex; i++) {
+                if(arr[smallest] > arr[i]){
+                    smallest=i;
+                }
             }
+            swap(arr,smallest,lastUnSortedIndex);
         }
         System.out.println("After sorting...");
         for (int i : arr) {
