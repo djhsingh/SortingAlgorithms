@@ -15,7 +15,6 @@ public class SelectionSortAlgorithm {
             for (int i = 1; i <= lastUnsortedIndex; i++) {  //O(n)
                  if(arr[largest] < arr[i]){
                      largest=i;
-
                  }
 
             }

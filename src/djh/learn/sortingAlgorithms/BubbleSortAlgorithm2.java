@@ -1,22 +1,22 @@
 package djh.learn.sortingAlgorithms;
 
-public class BubbleSortAlgorithm {
+public class BubbleSortAlgorithm2 {
     public static void main(String[] args) {
+        //forward loop
         int[] arr = {34,23,24,54,17,04,60,41,86,12};
-        //backword loop
         System.out.println("Before sorting...");
         for (int i : arr) {
             System.out.print(i+" ");
         }
         System.out.println();
         //O(n^2) sorting algorithm
-        for(int lastUnsortedIndex=arr.length-1;lastUnsortedIndex>0;lastUnsortedIndex--){ //O(n)
+        for(int j = 0;j<arr.length-1;j++){ //O(n)
             //*
-            for (int i = 0; i < lastUnsortedIndex; i++) {  //O(n)
+            for (int i = 0; i < arr.length - j -1; i++) {  //O(n)
                  if(arr[i] > arr[i+1]){
                      swap(arr,i,i+1);
                  }
-            }
+           }
             for (int i : arr) {
                 System.out.print(i+" ");
             }
@@ -27,12 +27,10 @@ public class BubbleSortAlgorithm {
         }
     }
 
-    public static void swap(int[] array,int i, int j){
-        if(i == j){
-            return;
-        }
-        int temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
+    public static void swap(int[] arr,int i, int j){
+
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 }
