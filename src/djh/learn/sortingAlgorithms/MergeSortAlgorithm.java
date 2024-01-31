@@ -22,12 +22,20 @@ public class MergeSortAlgorithm {
             return;
         }
         int midPoint = (start+end)/2;
-         mergeSort(arr,start,midPoint);
+        mergeSort(arr,start,midPoint);
         mergeSort(arr,midPoint,end);
         merge(arr,start,midPoint,end);
+        System.out.println("Merge Sort");
+        for (int i : arr) {
+            System.out.print(i+" ");
+        }
     }
 
     private static void  merge(int[] arr, int start, int midPoint, int end) {
+        System.out.println("Merge");
+        for (int i : arr) {
+            System.out.print(i+" ");
+        }
         if(arr[midPoint-1] <= arr[midPoint]){
             return;
         }
